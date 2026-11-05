@@ -1,7 +1,8 @@
 {
   "name": "aantars",
   "owner": {
-    "name": "aantars",
+    "name": "Adolfo",
+    "email": "aantars@hotmail.com",
     "url": "https://github.com/aantars"
   },
   "description": "aantars' agent skills, as an installable Claude Code plugin.",

@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Practical agent skills for everyday work. Starts with video-to-html: turn any video into one self-contained, readable HTML page (tutorial, highlights or full summary).",
   "author": {
-    "name": "aantars",
+    "name": "Adolfo",
+    "email": "aantars@hotmail.com",
     "url": "https://github.com/aantars"
   },
   "homepage": "https://github.com/aantars/skills",
