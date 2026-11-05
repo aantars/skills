@@ -1,0 +1,3 @@
+interface:
+  display_name: "Video to HTML"
+  short_description: "Turn a video into one readable, self-contained HTML page"

@@ -1,0 +1,23 @@
+{
+  "name": "aantars",
+  "owner": {
+    "name": "aantars",
+    "url": "https://github.com/aantars"
+  },
+  "description": "aantars' agent skills, as an installable Claude Code plugin.",
+  "allowCrossMarketplaceDependenciesOn": ["claude-video"],
+  "plugins": [
+    {
+      "name": "aantars-skills",
+      "source": "./",
+      "description": "Practical agent skills for everyday work, starting with video-to-html (any video into one readable, self-contained HTML page).",
+      "category": "productivity",
+      "keywords": [
+        "skills",
+        "productivity",
+        "video",
+        "html"
+      ]
+    }
+  ]
+}

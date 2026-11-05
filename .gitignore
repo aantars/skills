@@ -1,0 +1,17 @@
+# OS junk
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python
+__pycache__/
+*.pyc
+
+# video-to-html working files
+.work/
+
+# Node
+node_modules/

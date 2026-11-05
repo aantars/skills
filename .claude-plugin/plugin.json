@@ -1,0 +1,27 @@
+{
+  "name": "aantars-skills",
+  "version": "0.1.0",
+  "description": "Practical agent skills for everyday work. Starts with video-to-html: turn any video into one self-contained, readable HTML page (tutorial, highlights or full summary).",
+  "author": {
+    "name": "aantars",
+    "url": "https://github.com/aantars"
+  },
+  "homepage": "https://github.com/aantars/skills",
+  "repository": "https://github.com/aantars/skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "productivity",
+    "video",
+    "html",
+    "tutorial",
+    "summary",
+    "documentation"
+  ],
+  "skills": [
+    "./skills/productivity/video-to-html"
+  ],
+  "dependencies": [
+    "watch@claude-video"
+  ]
+}
