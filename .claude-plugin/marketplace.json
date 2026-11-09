@@ -11,13 +11,14 @@
     {
       "name": "aantars-skills",
       "source": "./",
-      "description": "Practical agent skills for everyday work, starting with video-to-html (any video into one readable, self-contained HTML page).",
+      "description": "Practical agent skills for everyday work: video-to-html (any video into one readable, self-contained HTML page) and confluence-read (a Confluence page with its images and attachments, past the 2FA wall).",
       "category": "productivity",
       "keywords": [
         "skills",
         "productivity",
         "video",
-        "html"
+        "html",
+        "confluence"
       ]
     }
   ]

@@ -74,9 +74,10 @@ Start a new Codex session afterwards.
 
 ```bash
 npx skills@latest add aantars/skills --skill video-to-html
+npx skills@latest add aantars/skills --skill confluence-read
 ```
 
-Pick your agent when prompted (or pass `-a <agent>`). To update, run `npx skills@latest update`.
+Run only the lines for the skills you want. Pick your agent when prompted (or pass `-a <agent>`). To update, run `npx skills@latest update`.
 
 </canonical-block>
 
@@ -91,7 +92,7 @@ Pick your agent when prompted (or pass `-a <agent>`). To update, run `npx skills
 | Claude Code | `claude plugin marketplace update aantars`, then `claude plugin update aantars-skills@aantars`. Or turn on auto-update for the `aantars` marketplace in `/plugin` > **Marketplaces**. | `claude plugin uninstall aantars-skills@aantars`, then `claude plugin marketplace remove aantars` |
 | Claude Desktop | **Customize** > **Plugins**, open **aantars-skills** and update it | Same place, uninstall it |
 | Codex | Updates itself at startup | Remove **aantars-skills** from the `/plugins` browser |
-| skills.sh | `npx skills@latest update` | `npx skills@latest remove video-to-html` |
+| skills.sh | `npx skills@latest update` | `npx skills@latest remove <skill-name>`, for example `video-to-html` |
 
 `watch` updates and uninstalls the same way, with `watch@claude-video` and the `claude-video` marketplace.
 

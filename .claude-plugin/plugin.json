@@ -1,7 +1,7 @@
 {
   "name": "aantars-skills",
-  "version": "0.1.0",
-  "description": "Practical agent skills for everyday work. Starts with video-to-html: turn any video into one self-contained, readable HTML page (tutorial, highlights or full summary).",
+  "version": "0.2.0",
+  "description": "Practical agent skills for everyday work: video-to-html turns any video into one self-contained, readable HTML page (tutorial, highlights or full summary); confluence-read reads a Confluence page with its images and attachments, past the 2FA wall.",
   "author": {
     "name": "Adolfo",
     "email": "aantars@hotmail.com",
@@ -17,10 +17,13 @@
     "html",
     "tutorial",
     "summary",
-    "documentation"
+    "documentation",
+    "confluence",
+    "wiki"
   ],
   "skills": [
-    "./skills/productivity/video-to-html"
+    "./skills/productivity/video-to-html",
+    "./skills/productivity/confluence-read"
   ],
   "dependencies": [
     "watch@claude-video"
