@@ -11,14 +11,15 @@
     {
       "name": "aantars-skills",
       "source": "./",
-      "description": "Practical agent skills for everyday work: video-to-html (any video into one readable, self-contained HTML page) and confluence-read (a Confluence page with its images and attachments, past the 2FA wall).",
+      "description": "Practical agent skills for everyday work: video-to-html (any video into one readable, self-contained HTML page) confluence-read (a Confluence page with its images and attachments, past the 2FA wall) and jira-read-attachments (a Jira issue with its attachments, through your session cookie).",
       "category": "productivity",
       "keywords": [
         "skills",
         "productivity",
         "video",
         "html",
-        "confluence"
+        "confluence",
+        "jira"
       ]
     }
   ]

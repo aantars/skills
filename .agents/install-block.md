@@ -75,6 +75,7 @@ Start a new Codex session afterwards.
 ```bash
 npx skills@latest add aantars/skills --skill video-to-html
 npx skills@latest add aantars/skills --skill confluence-read
+npx skills@latest add aantars/skills --skill jira-read-attachments
 ```
 
 Run only the lines for the skills you want. Pick your agent when prompted (or pass `-a <agent>`). To update, run `npx skills@latest update`.

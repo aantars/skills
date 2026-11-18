@@ -6,11 +6,13 @@ Skills para agentes que uso en el día a día, empaquetadas para instalarlas en 
 
 La primera es **video-to-html**: le das un vídeo (un enlace o un archivo de tu ordenador) y te devuelve una única página HTML autocontenida que puedes leer en lugar de verlo. Tú eliges el formato: tutorial paso a paso, lo más destacado o un resumen completo, en el idioma que quieras, con tema claro y oscuro y capturas sacadas del propio vídeo.
 
-**confluence-read** lee una página de Confluence completa: el texto a través de tu servidor MCP de Confluence y, además, las capturas, los diagramas y los adjuntos que un wiki con 2FA deja fuera de su alcance. Guarda la cookie de 2FA con su fecha de caducidad y te avisa cuando hay que renovarla. Irán llegando más skills.
+**confluence-read** lee una página de Confluence completa: el texto a través de tu servidor MCP de Confluence y, además, las capturas, los diagramas y los adjuntos que un wiki con 2FA deja fuera de su alcance. Guarda la cookie de 2FA con su fecha de caducidad y te avisa cuando hay que renovarla.
+
+**jira-read-attachments** lee una incidencia de Jira completa: campos, descripción y comentarios, además de las capturas, los PDF y los logs adjuntos. Usa la cookie de sesión de tu navegador, que guardas una sola vez en tu propia terminal y que nunca pasa por el chat. Irán llegando más skills.
 
 ## Instalación
 
-Instala las skills (paso 1). `video-to-html` necesita además la skill `watch`, en la que se apoya (paso 2); `confluence-read` no necesita ninguna otra skill.
+Instala las skills (paso 1). `video-to-html` necesita además la skill `watch`, en la que se apoya (paso 2); `confluence-read` y `jira-read-attachments` no necesitan ninguna otra skill.
 
 Un plugin es un paquete gestionado al que te suscribes. [skills.sh](https://skills.sh) copia archivos editables en la carpeta de skills de tu agente, y las actualizaciones corren de tu cuenta. **Elige una sola vía por agente**: si instalas las dos, tendrás cada skill duplicada.
 
@@ -70,6 +72,7 @@ Después abre una sesión nueva de Codex.
 ```bash
 npx skills@latest add aantars/skills --skill video-to-html
 npx skills@latest add aantars/skills --skill confluence-read
+npx skills@latest add aantars/skills --skill jira-read-attachments
 ```
 
 Ejecuta solo las líneas de las skills que quieras. Elige tu agente cuando te lo pregunte (o indícalo con `-a <agente>`). Para actualizar, ejecuta `npx skills@latest update`.
@@ -148,6 +151,7 @@ Herramientas para el trabajo diario, no específicas de programación.
 
 - **[video-to-html](./skills/productivity/video-to-html/SKILL.md)**: Convierte un vídeo (URL o archivo local) en una única página HTML autocontenida y adaptable, con tema claro y oscuro: un tutorial paso a paso, un resumen de lo más destacado o un resumen completo de todos los temas. [Documentación](./docs/productivity/video-to-html.es.md)
 - **[confluence-read](./skills/productivity/confluence-read/SKILL.md)**: Lee una página de Confluence (Server / Data Center) completa, incluidas las imágenes y los adjuntos protegidos por 2FA: el texto desde tu servidor MCP de Confluence y los archivos mediante una cookie de 2FA guardada que te avisa cuando caduca. [Documentación](./docs/productivity/confluence-read.es.md)
+- **[jira-read-attachments](./skills/productivity/jira-read-attachments/SKILL.md)**: Lee una incidencia de Jira (Server / Data Center) completa, incluidos sus adjuntos (capturas, PDF, logs): campos, descripción y comentarios, y los archivos mediante una cookie de sesión del navegador guardada que nunca pasa por el chat. [Documentación](./docs/productivity/jira-read-attachments.es.md)
 
 ## Actualizar y desinstalar
 
