@@ -1,0 +1,3 @@
+﻿interface:
+  display_name: "Jira Read Attachments"
+  short_description: "Read a Jira issue with its attachments, using your stored session cookie"

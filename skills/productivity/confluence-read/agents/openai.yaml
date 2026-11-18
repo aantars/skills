@@ -1,0 +1,3 @@
+interface:
+  display_name: "Confluence Read"
+  short_description: "Read a Confluence page with its images and attachments, past the 2FA wall"
