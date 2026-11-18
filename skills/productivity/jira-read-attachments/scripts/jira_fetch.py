@@ -380,12 +380,25 @@ def show(p):
     return str(p).removeprefix(LONG_PREFIX)
 
 
+def tidy_internal(s):
+    """Jira plugins return some fields as Java toString() text; reduce them to what a reader needs."""
+    if ".Sprint@" in s:
+        name = re.search(r"\bname=(.*?),(?=\w+=)", s)
+        state = re.search(r"\bstate=(\w+)", s)
+        return f"{name.group(1) if name else 'sprint'} ({state.group(1).lower()})" if state or name else ""
+    if "summaryBean=" in s:  # development panel: keep the pull request counts only
+        counts = {k: re.search(rf"\b{k}Count=(\d+)", s) for k in ("merged", "open", "declined")}
+        parts = [f"{m.group(1)} {k}" for k, m in counts.items() if m and m.group(1) != "0"]
+        return "pull requests: " + ", ".join(parts) if parts else ""
+    return s
+
+
 def fmt(v, limit=600):
     """Compact, readable text for any Jira field value."""
     if v is None:
         return ""
     if isinstance(v, str):
-        s = v
+        s = tidy_internal(v)
     elif isinstance(v, (int, float, bool)):
         s = str(v)
     elif isinstance(v, list):
@@ -434,7 +447,8 @@ def issue_markdown(client, issue, saved, names):
             lines.append(f"- subtask: {st.get('key')} - {st.get('fields', {}).get('summary', '')}")
         lines.append("")
 
-    custom = [(names.get(k, k), fmt(v)) for k, v in f.items() if k.startswith("customfield_") and fmt(v)]
+    custom = [(names.get(k, k), fmt(v)) for k, v in f.items() if k.startswith("customfield_") and fmt(v)
+              and not re.search(r"\brank\b", names.get(k, k), re.I)]  # ranking values are noise
     if custom:
         lines += ["## Custom fields", ""] + [f"- {n}: {v}" for n, v in custom] + [""]
 
